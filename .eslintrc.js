@@ -18,6 +18,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/react-in-jsx-scope': 'off', // React 17+ 不需要显式导入 React
     'no-shadow': 'off',
     'no-param-reassign': ['error', { props: false }],
     'no-console': 'off',
@@ -57,4 +58,4 @@ module.exports = {
       },
     ],
   },
-};
+}

@@ -1,14 +1,14 @@
-import path from 'path';
-import { loadEnv } from 'vite';
-import { viteMockServe } from 'vite-plugin-mock';
-import react from '@vitejs/plugin-react';
-import svgr from '@honkhonk/vite-plugin-svgr';
+import path from 'path'
+import { loadEnv } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
+import react from '@vitejs/plugin-react'
+import svgr from '@honkhonk/vite-plugin-svgr'
 
-const CWD = process.cwd();
+const CWD = process.cwd()
 
 export default (params) => {
-  const { mode } = params;
-  const { VITE_BASE_URL } = loadEnv(mode, CWD);
+  const { mode } = params
+  const { VITE_BASE_URL } = loadEnv(mode, CWD)
 
   return {
     base: VITE_BASE_URL,
@@ -26,6 +26,7 @@ export default (params) => {
         router: path.resolve(__dirname, './src/router'),
         hooks: path.resolve(__dirname, './src/hooks'),
         types: path.resolve(__dirname, './src/types'),
+        constants: path.resolve(__dirname, './src/constants'),
       },
     },
 
@@ -65,5 +66,5 @@ export default (params) => {
         },
       },
     },
-  };
-};
+  }
+}
