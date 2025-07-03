@@ -10,11 +10,12 @@
 <p align="center">
   <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vite.svg" alt="node compatibility"></a>
   <a href="https://github.com/Tencent/tdesign-react/blob/develop/LICENSE">
-    <img src="https://img.shields.io/npm/l/tdesign-react.svg?sanitize=true" alt="License">
+    <img src="https://img.shields.io/pnpm/l/tdesign-react.svg?sanitize=true" alt="License">
   </a>
 </p>
 
-English | [简体中文](./README-zh_CN.md) 
+English | [简体中文](./README-zh_CN.md)
+
 ### Introduction
 
 TDesign React Starter is a TDesign-based project developed with `React`, `Vite`. It can be customized theme configuration, and aims to provide project out-of-the-box, configuration-style middle and background projects.
@@ -39,11 +40,11 @@ TDesign React Starter is a TDesign-based project developed with `React`, `Vite`.
 
 ### Usage
 
-> Initialize project with our CLI tool `tdesign-starter-cli` 
+> Initialize project with our CLI tool `tdesign-starter-cli`
 
 ```bash
 ## install tdesign-starter-cli
-npm i tdesign-starter-cli@latest -g
+pnpm i tdesign-starter-cli@latest -g
 
 ## create project
 td-starter init
@@ -53,22 +54,21 @@ td-starter init
 
 ```bash
 ## install dependencies
-npm install
+pnpm install
 
 ## set up
-npm run dev
+pnpm run dev
 ```
 
 ### Build
 
 ```bash
 ## build
-npm run build
+pnpm run build
 
 ## build for test
-npm run build:test
+pnpm run build:test
 ```
-
 
 ### Contributing Guide
 
