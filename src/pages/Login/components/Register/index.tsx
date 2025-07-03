@@ -51,7 +51,7 @@ export default function Register() {
             name='email'
             rules={[
               { required: true, message: '邮箱必填', type: 'error' },
-              { email: true, message: '请输入正确的邮箱', type: 'warning' },
+              { email: true, message: '请输入正确的邮箱', type: 'warning' }
             ]}
           >
             <Input type='text' size='large' placeholder='请输入您的邮箱' prefixIcon={<MailIcon />} />

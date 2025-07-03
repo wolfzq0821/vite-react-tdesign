@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 
 const RECENT_7_DAYS: DateRangeValue = [
   dayjs().subtract(7, 'day').format('YYYY-MM-DD'),
-  dayjs().subtract(1, 'day').format('YYYY-MM-DD'),
+  dayjs().subtract(1, 'day').format('YYYY-MM-DD')
 ]
 
 const LastWeekDatePicker = (onChange: (value: DateRangeValue) => void) => (

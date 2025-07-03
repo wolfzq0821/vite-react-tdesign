@@ -11,7 +11,7 @@ const abortControllerMap: Map<string, AbortController> = new Map()
 
 const axiosInstance: AxiosInstance = axios.create({
   timeout: REQUEST_TIMEOUT,
-  baseURL: PATH_URL,
+  baseURL: PATH_URL
 })
 
 axiosInstance.interceptors.request.use((res: InternalAxiosRequestConfig) => {
@@ -22,6 +22,19 @@ axiosInstance.interceptors.request.use((res: InternalAxiosRequestConfig) => {
 
   return res
 })
+
+// 匹配显示对应状态码 提示文字
+const showHttpWorkErrorMsg = (error: AxiosError) => {
+  if (error.status && CONTENT_STATUS_CODE.some((item) => item.code === error.status)) {
+    CONTENT_STATUS_CODE.forEach((e) => {
+      if (error.status && e.code === error.status) {
+        console.log(e.label)
+      }
+    })
+  } else {
+    console.log(error.message)
+  }
+}
 
 axiosInstance.interceptors.response.use(
   (res: AxiosResponse) => {
@@ -35,7 +48,7 @@ axiosInstance.interceptors.response.use(
     console.error(error.message)
     showHttpWorkErrorMsg(error)
     return Promise.reject(error)
-  },
+  }
 )
 
 axiosInstance.interceptors.request.use(defaultRequestInterceptors)
@@ -69,19 +82,6 @@ const service = {
       controller.abort()
     }
     abortControllerMap.clear()
-  },
-}
-
-// 匹配显示对应状态码 提示文字
-const showHttpWorkErrorMsg = (error: AxiosError) => {
-  if (error.status && CONTENT_STATUS_CODE.some((item) => item.code === error.status)) {
-    CONTENT_STATUS_CODE.forEach((e) => {
-      if (error.status && e.code === error.status) {
-        console.log(e.label)
-      }
-    })
-  } else {
-    console.log(error.message)
   }
 }
 

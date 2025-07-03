@@ -7,7 +7,7 @@ const result: IRouter[] = [
     path: '/login',
     meta: {
       title: '登录页',
-      Icon: LogoutIcon,
+      Icon: LogoutIcon
     },
     children: [
       {
@@ -15,11 +15,11 @@ const result: IRouter[] = [
         Component: lazy(() => import('pages/Login')),
         isFullPage: true,
         meta: {
-          title: '登录中心',
-        },
-      },
-    ],
-  },
+          title: '登录中心'
+        }
+      }
+    ]
+  }
 ]
 
 export default result

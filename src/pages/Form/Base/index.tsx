@@ -11,7 +11,7 @@ import {
   Textarea,
   Avatar,
   Upload,
-  MessagePlugin,
+  MessagePlugin
 } from 'tdesign-react'
 import classnames from 'classnames'
 import { SubmitContext, FormInstanceFunctions } from 'tdesign-react/es/form/type'
@@ -33,7 +33,7 @@ const INITIAL_DATA = {
   endDate: '',
   remark: '',
   notary: '',
-  file: [],
+  file: []
 }
 
 export default memo(() => {

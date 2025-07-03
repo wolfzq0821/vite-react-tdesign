@@ -6,17 +6,17 @@ module.exports = {
   singleQuote: true,
   quoteProps: 'as-needed',
   jsxSingleQuote: true,
-  trailingComma: 'all',
+  trailingComma: 'none',
   bracketSpacing: true,
   jsxBracketSameLine: false,
   arrowParens: 'always',
   rangeStart: 0,
-  rangeEnd: null,
+  rangeEnd: Infinity,
   requirePragma: false,
   insertPragma: false,
   proseWrap: 'preserve',
   htmlWhitespaceSensitivity: 'css',
   vueIndentScriptAndStyle: false,
-  endOfLine: 'lf',
-  embeddedLanguageFormatting: 'auto',
-};
+  endOfLine: 'auto',
+  embeddedLanguageFormatting: 'auto'
+}

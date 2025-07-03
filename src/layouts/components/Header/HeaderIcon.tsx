@@ -8,7 +8,7 @@ import {
   HelpCircleIcon,
   SettingIcon,
   PoweroffIcon,
-  UserCircleIcon,
+  UserCircleIcon
 } from 'tdesign-icons-react'
 import { useAppDispatch } from 'modules/store'
 import { toggleSetting } from 'modules/global'

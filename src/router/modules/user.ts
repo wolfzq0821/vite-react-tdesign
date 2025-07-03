@@ -7,18 +7,18 @@ const result: IRouter[] = [
     path: '/user',
     meta: {
       title: '个人页',
-      Icon: UserCircleIcon,
+      Icon: UserCircleIcon
     },
     children: [
       {
         path: 'index',
         Component: lazy(() => import('pages/User')),
         meta: {
-          title: '个人中心',
-        },
-      },
-    ],
-  },
+          title: '个人中心'
+        }
+      }
+    ]
+  }
 ]
 
 export default result

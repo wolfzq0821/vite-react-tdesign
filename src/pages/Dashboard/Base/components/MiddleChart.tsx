@@ -19,13 +19,13 @@ const MiddleChart = () => {
 
   const dynamicLineChartOption = useDynamicChart(customOptions, {
     placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color'],
-    borderColor: ['series.0.itemStyle.borderColor', 'series.1.itemStyle.borderColor'],
+    borderColor: ['series.0.itemStyle.borderColor', 'series.1.itemStyle.borderColor']
   })
 
   const dynamicPieChartOption = useDynamicChart(pieOptions, {
     placeholderColor: ['legend.textStyle.color'],
     containerColor: ['series.0.itemStyle.borderColor'],
-    textColor: ['label.color', 'label.color'],
+    textColor: ['label.color', 'label.color']
   })
 
   return (

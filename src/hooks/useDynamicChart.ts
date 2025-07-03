@@ -16,13 +16,13 @@ export type TChartColorKey = keyof (typeof CHART_COLORS)[ETheme.light]
  */
 export default function useDynamicChart(
   options: Record<string, any>,
-  configs?: Partial<Record<TChartColorKey, Array<string>>>,
+  configs?: Partial<Record<TChartColorKey, Array<string>>>
 ) {
   const { theme, color } = useAppSelector(selectGlobal)
   return useMemo(() => {
     const dynamicColor = getChartColor(theme, color)
     const newOptions = {
-      ...options,
+      ...options
     }
     // 设置动态的图表颜色
     lodashSet(newOptions, 'color', dynamicColor.colorList)

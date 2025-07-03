@@ -24,7 +24,7 @@ export default memo((props: { callback: Function }) => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          flexDirection: 'column',
+          flexDirection: 'column'
         }}
       >
         <CheckCircleFilledIcon className={Style.icon} />

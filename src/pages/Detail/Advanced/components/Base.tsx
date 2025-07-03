@@ -13,7 +13,7 @@ const Base = () => (
           <span
             className={classnames({
               [Style.inProgress]: item.type === 'status',
-              [Style.pdf]: item.type === 'link',
+              [Style.pdf]: item.type === 'link'
             })}
           >
             {item.type === 'status' && <i />}

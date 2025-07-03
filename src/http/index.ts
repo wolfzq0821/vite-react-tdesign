@@ -13,8 +13,8 @@ const request = (option: AxiosConfig) => {
     headers: {
       'Content-Type': CONTENT_TYPE,
       token: '',
-      ...headers,
-    },
+      ...headers
+    }
   })
 }
 
@@ -24,5 +24,5 @@ export default {
   delete: <T = any>(option: AxiosConfig) => request({ method: 'delete', ...option }) as Promise<IResponse<T>>,
   put: <T = any>(option: AxiosConfig) => request({ method: 'put', ...option }) as Promise<IResponse<T>>,
   cancelRequest: (url: string | string[]) => service.cancelRequest(url),
-  cancelAllRequest: () => service.cancelAllRequest(),
+  cancelAllRequest: () => service.cancelAllRequest()
 }

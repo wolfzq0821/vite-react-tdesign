@@ -27,6 +27,6 @@ export const getProductList = async (params: IParams) => {
   list = list.splice(params.pageSize * (params.current - 1), params.pageSize)
   return {
     list,
-    total,
+    total
   }
 }

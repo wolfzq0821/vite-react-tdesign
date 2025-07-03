@@ -19,7 +19,7 @@ const initialState: IInitialState = {
   current: 1,
   pageSize: 12,
   total: 0,
-  productList: [],
+  productList: []
 }
 
 export const getList = createAsyncThunk(
@@ -28,15 +28,15 @@ export const getList = createAsyncThunk(
     const { pageSize, current } = params
     const result = await getProductList({
       pageSize,
-      current,
+      current
     })
     return {
       list: result?.list,
       total: result?.total,
       pageSize: params.pageSize,
-      current: params.current,
+      current: params.current
     }
-  },
+  }
 )
 
 const listCardSlice = createSlice({
@@ -46,7 +46,7 @@ const listCardSlice = createSlice({
     clearPageState: () => initialState,
     switchPageLoading: (state, action: PayloadAction<boolean>) => {
       state.pageLoading = action.payload
-    },
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -63,7 +63,7 @@ const listCardSlice = createSlice({
       .addCase(getList.rejected, (state) => {
         state.loading = false
       })
-  },
+  }
 })
 
 export const { clearPageState, switchPageLoading } = listCardSlice.actions

@@ -10,7 +10,7 @@ const TIMEOUT = 5000
 export const instance = axios.create({
   baseURL: API_HOST,
   timeout: TIMEOUT,
-  withCredentials: true,
+  withCredentials: true
 })
 
 instance.interceptors.response.use(
@@ -25,7 +25,7 @@ instance.interceptors.response.use(
     }
     return Promise.reject(response?.data)
   },
-  (e) => Promise.reject(e),
+  (e) => Promise.reject(e)
 )
 
 export default instance

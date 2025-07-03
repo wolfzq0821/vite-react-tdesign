@@ -10,14 +10,14 @@ export function getLineOptions(dateTime: any = []): EChartOption {
 
   return {
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     grid: {
       top: '10px',
       left: '0',
       right: '20px',
       bottom: '36px',
-      containLabel: true,
+      containLabel: true
     },
     xAxis: {
       type: 'category',
@@ -26,12 +26,12 @@ export function getLineOptions(dateTime: any = []): EChartOption {
       axisLine: {
         lineStyle: {
           color: '#E3E6EB',
-          width: 1,
-        },
-      },
+          width: 1
+        }
+      }
     },
     yAxis: {
-      type: 'value',
+      type: 'value'
     },
     legend: {
       data: ['本月', '上月'],
@@ -39,7 +39,7 @@ export function getLineOptions(dateTime: any = []): EChartOption {
       bottom: '0',
       itemGap: 48,
       itemHeight: 8,
-      itemWidth: 8,
+      itemWidth: 8
     },
     series: [
       {
@@ -51,7 +51,7 @@ export function getLineOptions(dateTime: any = []): EChartOption {
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         smooth: true,
@@ -59,8 +59,8 @@ export function getLineOptions(dateTime: any = []): EChartOption {
         symbol: 'circle',
         symbolSize: 8,
         areaStyle: {
-          color: '#0053D92F',
-        },
+          color: '#0053D92F'
+        }
       },
       {
         name: '本月',
@@ -71,15 +71,15 @@ export function getLineOptions(dateTime: any = []): EChartOption {
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         smooth: true,
         showSymbol: true,
         symbol: 'circle',
-        symbolSize: 8,
-      },
-    ],
+        symbolSize: 8
+      }
+    ]
   }
 }
 
@@ -96,37 +96,37 @@ export function getBarOptions(isMonth = false): EChartOption {
 
   return {
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     grid: {
       top: '10px',
       left: '0',
       right: '0',
       bottom: '36px',
-      containLabel: true,
+      containLabel: true
     },
     xAxis: [
       {
         type: 'category',
         data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
         axisTick: {
-          alignWithLabel: true,
+          alignWithLabel: true
         },
         axisLine: {
           lineStyle: {
             color: '#E3E6EB',
-            width: 1,
-          },
-        },
-      },
+            width: 1
+          }
+        }
+      }
     ],
     yAxis: [
       {
         type: 'value',
         axisLabel: {
-          color: 'rgba(0, 0, 0, 0.4)',
-        },
-      },
+          color: 'rgba(0, 0, 0, 0.4)'
+        }
+      }
     ],
     legend: {
       data: ['去年', '今年'],
@@ -134,7 +134,7 @@ export function getBarOptions(isMonth = false): EChartOption {
       icon: 'rect',
       itemGap: 48,
       itemHeight: 4,
-      itemWidth: 12,
+      itemWidth: 12
       // itemStyle: {},
     },
     series: [
@@ -144,15 +144,15 @@ export function getBarOptions(isMonth = false): EChartOption {
         barWidth: '30%',
         data: lastYearListCopy,
         itemStyle: {
-          color: '#BCC4D0',
-        },
+          color: '#BCC4D0'
+        }
       },
       {
         name: '今年',
         type: 'bar',
         barWidth: '30%',
-        data: thisYearListCopy,
-      },
-    ],
+        data: thisYearListCopy
+      }
+    ]
   }
 }

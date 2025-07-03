@@ -26,8 +26,8 @@ export default (params) => {
         router: path.resolve(__dirname, './src/router'),
         hooks: path.resolve(__dirname, './src/hooks'),
         types: path.resolve(__dirname, './src/types'),
-        constants: path.resolve(__dirname, './src/constants'),
-      },
+        constants: path.resolve(__dirname, './src/constants')
+      }
     },
 
     css: {
@@ -35,9 +35,9 @@ export default (params) => {
         less: {
           modifyVars: {
             // 如需自定义组件其他 token, 在此处配置
-          },
-        },
-      },
+          }
+        }
+      }
     },
 
     plugins: [
@@ -46,12 +46,12 @@ export default (params) => {
       mode === 'mock' &&
         viteMockServe({
           mockPath: './mock',
-          localEnabled: true,
-        }),
+          localEnabled: true
+        })
     ],
 
     build: {
-      cssCodeSplit: false,
+      cssCodeSplit: false
     },
 
     server: {
@@ -62,9 +62,9 @@ export default (params) => {
           // 用于开发环境下的转发请求
           // 更多请参考：https://vitejs.dev/config/#server-proxy
           target: 'https://service-exndqyuk-1257786608.gz.apigw.tencentcs.com',
-          changeOrigin: true,
-        },
-      },
-    },
+          changeOrigin: true
+        }
+      }
+    }
   }
 }

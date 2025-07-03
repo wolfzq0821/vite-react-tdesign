@@ -15,7 +15,7 @@ export const dataItemList: IItem[] = [
     tag: '合同动态',
     createTime: '2021-01-01 08:00',
     status: 1,
-    type: 1,
+    type: 1
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const dataItemList: IItem[] = [
     tag: '票务动态',
     createTime: '2021-01-01 08:00',
     status: 2,
-    type: 2,
+    type: 2
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const dataItemList: IItem[] = [
     tag: '会议通知',
     createTime: '2021-01-01 08:00',
     status: 1,
-    type: 3,
+    type: 3
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const dataItemList: IItem[] = [
     tag: '票务动态',
     createTime: '2021-01-01 08:00',
     status: 1,
-    type: 2,
+    type: 2
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const dataItemList: IItem[] = [
     tag: '票务动态',
     createTime: '2021-01-01 08:00',
     status: 1,
-    type: 2,
+    type: 2
   },
   {
     id: 6,
@@ -55,6 +55,6 @@ export const dataItemList: IItem[] = [
     tag: '票务动态',
     createTime: '2021-01-01 08:00',
     status: 1,
-    type: 2,
-  },
+    type: 2
+  }
 ]

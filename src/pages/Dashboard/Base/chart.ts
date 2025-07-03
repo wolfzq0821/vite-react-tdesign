@@ -5,14 +5,14 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
   const [timeArray, inArray, outArray] = getChartDataSet(dateTime)
   return {
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     grid: {
       left: '0',
       right: '20px',
       top: '5px',
       bottom: '36px',
-      containLabel: true,
+      containLabel: true
     },
     legend: {
       left: 'center',
@@ -20,8 +20,8 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
       orient: 'horizontal', // legend 横向布局。
       data: ['本月', '上月'],
       textStyle: {
-        fontSize: 12,
-      },
+        fontSize: 12
+      }
     },
     xAxis: {
       type: 'category',
@@ -30,12 +30,12 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
       axisLine: {
         lineStyle: {
           color: '#E3E6EB',
-          width: 1,
-        },
-      },
+          width: 1
+        }
+      }
     },
     yAxis: {
-      type: 'value',
+      type: 'value'
     },
     series: [
       {
@@ -47,11 +47,11 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
         symbol: 'circle',
         symbolSize: 8,
         itemStyle: {
-          borderWidth: 1,
+          borderWidth: 1
         },
         areaStyle: {
-          color: '#0053D92F',
-        },
+          color: '#0053D92F'
+        }
       },
       {
         name: '上月',
@@ -62,30 +62,30 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
         symbol: 'circle',
         symbolSize: 8,
         itemStyle: {
-          borderWidth: 1,
-        },
-      },
-    ],
+          borderWidth: 1
+        }
+      }
+    ]
   }
 }
 
 export const getPieChartOptions = (radius = 42): EChartOption => ({
   tooltip: {
-    trigger: 'item',
+    trigger: 'item'
   },
   grid: {
     top: '0',
-    right: '0',
+    right: '0'
   },
   legend: {
     itemWidth: 12,
     itemHeight: 4,
     textStyle: {
-      fontSize: 12,
+      fontSize: 12
     },
     left: 'center',
     bottom: '0',
-    orient: 'horizontal', // legend 横向布局。
+    orient: 'horizontal' // legend 横向布局。
   },
   series: [
     {
@@ -95,7 +95,7 @@ export const getPieChartOptions = (radius = 42): EChartOption => ({
       avoidLabelOverlap: false,
       silent: true,
       itemStyle: {
-        borderWidth: 1,
+        borderWidth: 1
       },
       label: {
         show: true,
@@ -105,49 +105,49 @@ export const getPieChartOptions = (radius = 42): EChartOption => ({
           value: {
             fontSize: 28,
             fontWeight: 'normal',
-            lineHeight: 46,
+            lineHeight: 46
           },
           name: {
             color: '#909399',
             fontSize: 12,
-            lineHeight: 14,
-          },
-        },
+            lineHeight: 14
+          }
+        }
       },
       labelLine: {
-        show: false,
+        show: false
       },
       data: [
         { value: 1048, name: '线上' },
-        { value: radius * 7, name: '门店' },
-      ],
-    },
-  ],
+        { value: radius * 7, name: '门店' }
+      ]
+    }
+  ]
 })
 
 export const getBarChartOptions = (dateTime: Array<string> = []): EChartOption => {
   const [timeArray, inArray, outArray] = getChartDataSet(dateTime)
   return {
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     xAxis: {
       type: 'category',
       data: timeArray,
       axisLine: {
         lineStyle: {
-          width: 1,
-        },
-      },
+          width: 1
+        }
+      }
     },
     yAxis: {
-      type: 'value',
+      type: 'value'
     },
     grid: {
       top: '5%',
       left: '25px',
       right: 0,
-      bottom: '60px',
+      bottom: '60px'
     },
     legend: {
       icon: 'rect',
@@ -156,25 +156,25 @@ export const getBarChartOptions = (dateTime: Array<string> = []): EChartOption =
       itemGap: 48,
       textStyle: {
         fontSize: 12,
-        color: 'rgba(0, 0, 0, 0.6)',
+        color: 'rgba(0, 0, 0, 0.6)'
       },
       left: 'center',
       bottom: '0',
       orient: 'horizontal',
-      data: ['本月', '上月'],
+      data: ['本月', '上月']
     },
     series: [
       {
         name: '本月',
         data: outArray,
-        type: 'bar',
+        type: 'bar'
       },
       {
         name: '上月',
         data: inArray,
-        type: 'bar',
-      },
-    ],
+        type: 'bar'
+      }
+    ]
   }
 }
 
@@ -183,11 +183,11 @@ export const MICRO_CHART_OPTIONS_LINE: EChartOption = {
   xAxis: {
     type: 'category',
     show: false,
-    data: ONE_WEEK_LIST,
+    data: ONE_WEEK_LIST
   },
   yAxis: {
     show: false,
-    type: 'value',
+    type: 'value'
   },
   grid: {
     top: 0,
@@ -195,17 +195,17 @@ export const MICRO_CHART_OPTIONS_LINE: EChartOption = {
     right: 0,
     bottom: 0,
     tooltip: {
-      show: false,
-    },
+      show: false
+    }
   },
   color: ['#fff'],
   series: [
     {
       data: [150, 230, 224, 218, 135, 147, 260],
       type: 'line',
-      showSymbol: false,
-    },
-  ],
+      showSymbol: false
+    }
+  ]
 }
 
 // BarChartIcon Data
@@ -213,11 +213,11 @@ export const MICRO_CHART_OPTIONS_BAR: EChartOption = {
   xAxis: {
     type: 'category',
     show: false,
-    data: ONE_WEEK_LIST,
+    data: ONE_WEEK_LIST
   },
   yAxis: {
     show: false,
-    type: 'value',
+    type: 'value'
   },
   grid: {
     top: 0,
@@ -225,8 +225,8 @@ export const MICRO_CHART_OPTIONS_BAR: EChartOption = {
     right: 0,
     bottom: 0,
     tooltip: {
-      show: false,
-    },
+      show: false
+    }
   },
   series: [
     {
@@ -238,24 +238,24 @@ export const MICRO_CHART_OPTIONS_BAR: EChartOption = {
         {
           value: 135,
           itemStyle: {
-            opacity: 0.2,
-          },
+            opacity: 0.2
+          }
         },
         {
           value: 118,
           itemStyle: {
-            opacity: 0.2,
-          },
+            opacity: 0.2
+          }
         },
         {
           value: 60,
           itemStyle: {
-            opacity: 0.2,
-          },
-        },
+            opacity: 0.2
+          }
+        }
       ],
       type: 'bar',
-      barWidth: 9,
-    },
-  ],
+      barWidth: 9
+    }
+  ]
 }

@@ -47,5 +47,5 @@ export default {
   [ELayout.side]: SideLayout,
   [ELayout.top]: TopLayout,
   [ELayout.mix]: MixLayout,
-  [ELayout.fullPage]: FullPageLayout,
+  [ELayout.fullPage]: FullPageLayout
 }

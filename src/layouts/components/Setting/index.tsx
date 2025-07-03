@@ -10,7 +10,7 @@ import {
   switchColor,
   switchLayout,
   openSystemTheme,
-  ELayout,
+  ELayout
 } from 'modules/global'
 import { ETheme } from 'types/index.d'
 import RadioColor from './RadioColor'
@@ -23,40 +23,40 @@ import System from 'assets/svg/assets-setting-auto.svg?component'
 import Style from './index.module.less'
 
 enum ESettingTheme {
-  system,
+  system
 }
 
 const themeList = [
   {
     value: ETheme.light,
     image: <Light />,
-    name: '明亮',
+    name: '明亮'
   },
   {
     value: ETheme.dark,
     image: <Dark />,
-    name: '黑暗',
+    name: '黑暗'
   },
   {
     value: ESettingTheme.system,
     image: <System />,
-    name: '跟随系统',
-  },
+    name: '跟随系统'
+  }
 ]
 
 const layoutList = [
   {
     value: ELayout.side,
-    image: 'https://tdesign.gtimg.com/starter/setting/side.png',
+    image: 'https://tdesign.gtimg.com/starter/setting/side.png'
   },
   {
     value: ELayout.top,
-    image: 'https://tdesign.gtimg.com/starter/setting/top.png',
+    image: 'https://tdesign.gtimg.com/starter/setting/top.png'
   },
   {
     value: ELayout.mix,
-    image: 'https://tdesign.gtimg.com/starter/setting/mix.png',
-  },
+    image: 'https://tdesign.gtimg.com/starter/setting/mix.png'
+  }
 ]
 
 export default memo(() => {

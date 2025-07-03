@@ -12,11 +12,11 @@ export const dataInfo = [
   { id: 11, name: '合同结束日期', value: '2022-12-20' },
   { id: 12, name: '合同附件', value: '总部办公用品采购项目合同.pdf', type: 'link' },
   { id: 13, name: '备注', value: '--' },
-  { id: 14, name: '创建时间', value: '2020-12-22 10:00:00' },
+  { id: 14, name: '创建时间', value: '2020-12-22 10:00:00' }
 ]
 
 export const dataStep = [
   { id: 1, name: '上传合同附件', detail: '这里是提示文字' },
   { id: 2, name: '修改合同金额', detail: '这里是提示文字' },
-  { id: 3, name: '新建合同', detail: '2020-12-01 15:00:00 管理员-李川操作' },
+  { id: 3, name: '新建合同', detail: '2020-12-01 15:00:00 管理员-李川操作' }
 ]

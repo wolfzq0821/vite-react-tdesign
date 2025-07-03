@@ -6,7 +6,7 @@ const TOKEN_NAME = 'tdesign-starter'
 
 const initialState = {
   token: localStorage.getItem(TOKEN_NAME) || 'main_token', // 默认token不走权限
-  userInfo: {},
+  userInfo: {}
 }
 
 // login
@@ -34,7 +34,7 @@ export const login = createAsyncThunk(`${namespace}/login`, async (userInfo: Rec
     return {
       code: 200,
       message: '登陆成功',
-      data: 'main_token',
+      data: 'main_token'
     }
   }
 
@@ -52,12 +52,12 @@ export const getUserInfo = createAsyncThunk(`${namespace}/getUserInfo`, async (_
     if (token === 'main_token') {
       return {
         name: 'td_main',
-        roles: ['all'],
+        roles: ['all']
       }
     }
     return {
       name: 'td_dev',
-      roles: ['userIndex', 'dashboardBase', 'login'],
+      roles: ['userIndex', 'dashboardBase', 'login']
     }
   }
 
@@ -77,7 +77,7 @@ const userSlice = createSlice({
     },
     remove: (state) => {
       state.token = ''
-    },
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -89,7 +89,7 @@ const userSlice = createSlice({
       .addCase(getUserInfo.fulfilled, (state, action) => {
         state.userInfo = action.payload
       })
-  },
+  }
 })
 
 export const selectListBase = (state: RootState) => state.listBase

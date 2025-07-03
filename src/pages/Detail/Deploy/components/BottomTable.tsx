@@ -13,7 +13,7 @@ const BottomTable = () => {
   const pagination = {
     pageSize: 10,
     total: tableData.length,
-    pageSizeOptions: [],
+    pageSizeOptions: []
   }
 
   useEffect(() => {

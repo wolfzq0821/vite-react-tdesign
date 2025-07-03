@@ -21,7 +21,7 @@ function getColorFromThemeColor(theme: string, themeColor: string): Array<string
     themeColorList = Color.getRandomPalette({
       color: themeColor,
       colorGamut: 'bright',
-      number: 8,
+      number: 8
     })
   }
 
@@ -44,12 +44,11 @@ export function generateColorMap(
   theme: string,
   colorPalette: Array<string>,
   mode: 'light' | 'dark',
-  brandColorIdx: number,
+  brandColorIdx: number
 ) {
   const isDarkMode = mode === 'dark'
 
   if (isDarkMode) {
-    // eslint-disable-next-line no-use-before-define
     colorPalette.reverse().map((color) => {
       const [h, s, l] = Color.colorTransform(color, 'hex', 'hsl')
       return Color.colorTransform([h, Number(s) - 4, l], 'hsl', 'hex')
@@ -70,7 +69,7 @@ export function generateColorMap(
     '--td-brand-color-7': brandColorIdx > 0 ? colorPalette[brandColorIdx - 1] : theme, // hover
     '--td-brand-color-8': colorPalette[brandColorIdx], // 主题色
     '--td-brand-color-9': brandColorIdx > 8 ? theme : colorPalette[brandColorIdx + 1], // click
-    '--td-brand-color-10': colorPalette[9],
+    '--td-brand-color-10': colorPalette[9]
   }
   return colorMap
 }
@@ -162,33 +161,32 @@ export const colorIsDark = (color: string) => {
 }
 
 /**
+ * 对HEX色彩的R/G/B通道值执行百分比减法运算
+ * @param {string} color 标注需要被处理的原始色彩变量
+ * @param {number} amount 色彩变量幅度
+ * @returns {string} 转换后的数据‌
+ */
+const subtractLight = (color: string, amount: number): string => {
+  const cc = parseInt(color, 16) - amount
+  const c = cc < 0 ? 0 : cc
+  return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`
+}
+
+/**
  * ‌根据指定百分比加深 十六进制颜色
  * @param {string} color 待处理颜色
  * @param {number} amount 改变颜色的数值
  * @returns {string} 改变后的 十六进制 颜色值
  */
 export const darken = (color: string, amount: number): string => {
+  // eslint-disable-next-line no-param-reassign
   color = color.indexOf('#') >= 0 ? color.substring(1, color.length) : color
+  // eslint-disable-next-line no-param-reassign
   amount = Math.trunc((255 * amount) / 100)
   return `#${subtractLight(color.substring(0, 2), amount)}${subtractLight(
     color.substring(2, 4),
-    amount,
+    amount
   )}${subtractLight(color.substring(4, 6), amount)}`
-}
-
-/**
- * 根据传入的百分比加亮 6位十六进制颜色
- * @param {string} color 要改变的颜色
- * @param {number} amount 改变颜色的值
- * @returns {string} 改变后的 十六进制 颜色值
- */
-export const lighten = (color: string, amount: number): string => {
-  color = color.indexOf('#') >= 0 ? color.substring(1, color.length) : color
-  amount = Math.trunc((255 * amount) / 100)
-  return `#${addLight(color.substring(0, 2), amount)}${addLight(color.substring(2, 4), amount)}${addLight(
-    color.substring(4, 6),
-    amount,
-  )}`
 }
 
 /* 将指定百分比添加到十六进制颜色分量（RR、GG或BB）以提高其亮度 */
@@ -202,6 +200,23 @@ const addLight = (color: string, amount: number): string => {
   const cc = parseInt(color, 16) + amount
   const c = cc > 255 ? 255 : cc
   return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`
+}
+
+/**
+ * 根据传入的百分比加亮 6位十六进制颜色
+ * @param {string} color 要改变的颜色
+ * @param {number} amount 改变颜色的值
+ * @returns {string} 改变后的 十六进制 颜色值
+ */
+export const lighten = (color: string, amount: number): string => {
+  // eslint-disable-next-line no-param-reassign
+  color = color.indexOf('#') >= 0 ? color.substring(1, color.length) : color
+  // eslint-disable-next-line no-param-reassign
+  amount = Math.trunc((255 * amount) / 100)
+  return `#${addLight(color.substring(0, 2), amount)}${addLight(color.substring(2, 4), amount)}${addLight(
+    color.substring(4, 6),
+    amount
+  )}`
 }
 
 /**
@@ -235,18 +250,6 @@ export const calculateBestTextColor = (hexColor: string) => {
   const contrastWithBlack = contrast(rgbColor.split(','), [0, 0, 0])
 
   return contrastWithBlack >= 12 ? '#000000' : '#FFFFFF'
-}
-
-/**
- * 对HEX色彩的R/G/B通道值执行百分比减法运算
- * @param {string} color 标注需要被处理的原始色彩变量
- * @param {number} amount 色彩变量幅度
- * @returns {string} 转换后的数据‌
- */
-const subtractLight = (color: string, amount: number): string => {
-  const cc = parseInt(color, 16) - amount
-  const c = cc < 0 ? 0 : cc
-  return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`
 }
 
 /**

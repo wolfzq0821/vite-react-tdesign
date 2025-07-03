@@ -10,7 +10,7 @@ const { BreadcrumbItem } = Breadcrumb
 const Page = ({
   children,
   isFullPage,
-  breadcrumbs,
+  breadcrumbs
 }: React.PropsWithChildren<{ isFullPage?: boolean; breadcrumbs?: string[] }>) => {
   const globalState = useAppSelector(selectGlobal)
   const dispatch = useAppDispatch()

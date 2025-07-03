@@ -12,11 +12,11 @@ const reducer = combineReducers({
   user,
   listBase,
   listSelect,
-  listCard,
+  listCard
 })
 
 export const store = configureStore({
-  reducer,
+  reducer
 })
 
 export type RootState = ReturnType<typeof store.getState>

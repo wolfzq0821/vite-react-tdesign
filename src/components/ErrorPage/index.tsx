@@ -9,7 +9,7 @@ import style from './index.module.less'
 enum ECode {
   forbidden = 403,
   notFount = 404,
-  error = 500,
+  error = 500
 }
 
 interface IErrorPageProps {
@@ -22,18 +22,18 @@ const errorInfo = {
   [ECode.forbidden]: {
     title: '403 Forbidden',
     desc: '抱歉，您无权限访问此页面',
-    icon: <Light403Icon />,
+    icon: <Light403Icon />
   },
   [ECode.notFount]: {
     title: '404 Not Found',
     desc: '抱歉，您访问的页面不存在。',
-    icon: <Light404Icon />,
+    icon: <Light404Icon />
   },
   [ECode.error]: {
     title: '500 Internal Server Error',
     desc: '抱歉，服务器出错啦！',
-    icon: <Light500Icon />,
-  },
+    icon: <Light500Icon />
+  }
 }
 
 const ErrorPage: React.FC<IErrorPageProps> = (props) => {

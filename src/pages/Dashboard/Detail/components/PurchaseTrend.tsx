@@ -38,13 +38,13 @@ const ProductTrend = ({ type, isSetup, description, name, icon }: IProductTrendP
           {
             content: '管理',
             value: 'manage',
-            onClick: () => {},
+            onClick: () => {}
           },
           {
             content: '删除',
             value: 'delete',
-            onClick: () => {},
-          },
+            onClick: () => {}
+          }
         ]}
       >
         <Icon name='more' />
@@ -64,7 +64,7 @@ const PurchaseTrend = () => {
   }
 
   const dynamicChartOptions = useDynamicChart(customOptions, {
-    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color'],
+    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color']
   })
 
   return (

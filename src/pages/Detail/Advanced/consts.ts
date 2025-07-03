@@ -19,7 +19,7 @@ export const dataInfo: InfoItem[] = [
   { id: 11, name: '合同结束日期', value: '2022-12-20' },
   { id: 12, name: '合同附件', value: '总部办公用品采购项目合同.pdf', type: 'link' },
   { id: 13, name: '备注', value: '--' },
-  { id: 14, name: '创建时间', value: '2020-12-22 10:00:00' },
+  { id: 14, name: '创建时间', value: '2020-12-22 10:00:00' }
 ]
 
 // Mock Data of 变更记录
@@ -32,7 +32,7 @@ export const dataStep: IStepItem[] = [
   { id: 1, name: '申请提交', detail: '已于12月21日提交' },
   { id: 2, name: '电子发票', detail: '预计1～3个工作日' },
   { id: 3, name: '发票已邮寄', detail: '电子发票开出后7个工作日内联系' },
-  { id: 4, name: '完成', detail: '' },
+  { id: 4, name: '完成', detail: '' }
 ]
 export const stepCurrent = 2
 
@@ -48,7 +48,7 @@ for (let i = 0; i < total; i++) {
     code: 'p_tmp_60a637cd0d	',
     amount: 52,
     department: '财务部',
-    createtime: '2021-12-30 10:43:56',
+    createtime: '2021-12-30 10:43:56'
   })
 }
 export const dataBuyList = listTables

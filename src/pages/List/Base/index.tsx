@@ -12,7 +12,7 @@ export const PaymentTypeMap: {
   [key: number]: React.ReactElement
 } = {
   0: <TrendIcon trend={ETrend.down} trendNum='付款' />,
-  1: <TrendIcon trend={ETrend.up} trendNum='收款' />,
+  1: <TrendIcon trend={ETrend.up} trendNum='收款' />
 }
 
 export const StatusMap: {
@@ -42,7 +42,7 @@ export const StatusMap: {
     <Tag theme='danger' variant='light'>
       审核失败
     </Tag>
-  ),
+  )
 }
 
 export const ContractTypeMap: {
@@ -50,7 +50,7 @@ export const ContractTypeMap: {
 } = {
   0: '审核失败',
   1: '待审核',
-  2: '待履行',
+  2: '待履行'
 }
 
 export default memo(() => {
@@ -64,8 +64,8 @@ export default memo(() => {
     dispatch(
       getList({
         pageSize: pageState.pageSize,
-        current: pageState.current,
-      }),
+        current: pageState.current
+      })
     )
     return () => {
       console.log('clear')
@@ -102,7 +102,7 @@ export default memo(() => {
           {
             colKey: 'row-select',
             fixed: 'left',
-            type: 'multiple',
+            type: 'multiple'
             // width: 50,
           },
           {
@@ -110,7 +110,7 @@ export default memo(() => {
             width: 200,
             ellipsis: true,
             colKey: 'name',
-            title: '合同名称',
+            title: '合同名称'
           },
           {
             align: 'left',
@@ -120,14 +120,14 @@ export default memo(() => {
             title: '合同状态',
             cell({ row }) {
               return StatusMap[row.status || 5]
-            },
+            }
           },
           {
             align: 'left',
             width: 200,
             ellipsis: true,
             colKey: 'no',
-            title: '合同编号',
+            title: '合同编号'
           },
           {
             align: 'left',
@@ -137,7 +137,7 @@ export default memo(() => {
             title: '合同类型',
             cell({ row }) {
               return ContractTypeMap[row.contractType]
-            },
+            }
           },
           {
             align: 'left',
@@ -147,14 +147,14 @@ export default memo(() => {
             title: '合同收付类型',
             cell({ row }) {
               return PaymentTypeMap[row.paymentType]
-            },
+            }
           },
           {
             align: 'left',
             width: 200,
             ellipsis: true,
             colKey: 'amount',
-            title: '合同金额（元）',
+            title: '合同金额（元）'
           },
           {
             align: 'left',
@@ -173,8 +173,8 @@ export default memo(() => {
                   </Button>
                 </>
               )
-            },
-          },
+            }
+          }
         ]}
         loading={loading}
         data={contractList}
@@ -192,18 +192,18 @@ export default memo(() => {
             dispatch(
               getList({
                 pageSize: pageInfo.pageSize,
-                current: pageInfo.current,
-              }),
+                current: pageInfo.current
+              })
             )
           },
           onPageSizeChange(size) {
             dispatch(
               getList({
                 pageSize: size,
-                current: 1,
-              }),
+                current: 1
+              })
             )
-          },
+          }
         }}
       />
     </div>

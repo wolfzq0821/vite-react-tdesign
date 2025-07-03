@@ -15,8 +15,8 @@ const CardList = () => {
     await dispatch(
       getList({
         pageSize: pageState.pageSize,
-        current: 1,
-      }),
+        current: 1
+      })
     )
     await dispatch(switchPageLoading(false))
   }
@@ -32,8 +32,8 @@ const CardList = () => {
     await dispatch(
       getList({
         pageSize,
-        current,
-      }),
+        current
+      })
     )
   }
 
@@ -41,8 +41,8 @@ const CardList = () => {
     await dispatch(
       getList({
         pageSize,
-        current,
-      }),
+        current
+      })
     )
   }
 

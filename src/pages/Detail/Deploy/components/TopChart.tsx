@@ -14,7 +14,7 @@ const TopChart = () => {
     setBarOptions(getBarOptions(isMonth))
   }
   const dynamicBarChartOptions = useDynamicChart(barOptions, {
-    placeholderColor: ['legend.textStyle.color', 'xAxis.0.axisLabel.color', 'yAxis.0.axisLabel.color'],
+    placeholderColor: ['legend.textStyle.color', 'xAxis.0.axisLabel.color', 'yAxis.0.axisLabel.color']
   })
   return (
     <Row gutter={16} className={Style.panel}>

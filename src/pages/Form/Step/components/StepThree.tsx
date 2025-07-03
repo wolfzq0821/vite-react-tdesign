@@ -7,24 +7,24 @@ const { Option } = Select
 const addressOptions = [
   {
     label: '广东省深圳市南山区',
-    value: '0',
+    value: '0'
   },
   {
     label: '北京市海淀区',
-    value: '1',
+    value: '1'
   },
   {
     label: '四川省成都市高新区',
-    value: '2',
+    value: '2'
   },
   {
     label: '广东省广州市天河区',
-    value: '3',
+    value: '3'
   },
   {
     label: '陕西省西安市高新区',
-    value: '4',
-  },
+    value: '4'
+  }
 ]
 
 export default memo((props: { current: number; callback: Function; steps: any[] }) => {

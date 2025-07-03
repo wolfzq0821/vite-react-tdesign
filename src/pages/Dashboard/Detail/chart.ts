@@ -15,36 +15,36 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
       top: '5%',
       right: '10px',
       left: '30px',
-      bottom: '60px',
+      bottom: '60px'
     },
     legend: {
       left: 'center',
       bottom: '0',
       orient: 'horizontal', // legend 横向布局。
-      data: ['杯子', '茶叶', '蜂蜜', '面粉'],
+      data: ['杯子', '茶叶', '蜂蜜', '面粉']
     },
     xAxis: {
       type: 'category',
       data: dateArray,
       boundaryGap: false,
       axisLabel: {
-        color: 'rgba(0, 0, 0, 0.4)',
+        color: 'rgba(0, 0, 0, 0.4)'
       },
       axisLine: {
         lineStyle: {
           color: '#E3E6EB',
-          width: 1,
-        },
-      },
+          width: 1
+        }
+      }
     },
     yAxis: {
       type: 'value',
       axisLabel: {
-        color: 'rgba(0, 0, 0, 0.4)',
-      },
+        color: 'rgba(0, 0, 0, 0.4)'
+      }
     },
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     series: [
       {
@@ -60,13 +60,13 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         itemStyle: {
           borderColor: '#ffffff',
-          borderWidth: 1,
-        },
+          borderWidth: 1
+        }
       },
       {
         showSymbol: true,
@@ -81,13 +81,13 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         itemStyle: {
           borderColor: '#ffffff',
-          borderWidth: 1,
-        },
+          borderWidth: 1
+        }
       },
       {
         showSymbol: true,
@@ -102,13 +102,13 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         itemStyle: {
           borderColor: '#ffffff',
-          borderWidth: 1,
-        },
+          borderWidth: 1
+        }
       },
       {
         showSymbol: true,
@@ -123,15 +123,15 @@ export const getLineChartOptions = (dateTime: Array<string> = []): EChartOption 
           getRandomInt(),
           getRandomInt(),
           getRandomInt(),
-          getRandomInt(),
+          getRandomInt()
         ],
         type: 'line',
         itemStyle: {
           borderColor: '#ffffff',
-          borderWidth: 1,
-        },
-      },
-    ],
+          borderWidth: 1
+        }
+      }
+    ]
   }
 }
 
@@ -142,40 +142,40 @@ export const getScatterChartOptions = (dateTime: Array<string> = []): EChartOpti
     xAxis: {
       data: timeArray,
       axisLabel: {
-        color: 'rgba(0, 0, 0, 0.4)',
+        color: 'rgba(0, 0, 0, 0.4)'
       },
       splitLine: { show: false },
       axisLine: {
         lineStyle: {
           color: '#E3E6EB',
-          width: 1,
-        },
-      },
+          width: 1
+        }
+      }
     },
     yAxis: {
       type: 'value',
       // splitLine: { show: false},
       axisLabel: {
-        color: 'rgba(0, 0, 0, 0.4)',
+        color: 'rgba(0, 0, 0, 0.4)'
       },
       nameTextStyle: {
-        padding: [0, 0, 0, 60],
+        padding: [0, 0, 0, 60]
       },
       axisTick: {
-        show: false,
+        show: false
       },
       axisLine: {
-        show: false,
-      },
+        show: false
+      }
     },
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     grid: {
       top: '5px',
       left: '25px',
       right: '5px',
-      bottom: '60px',
+      bottom: '60px'
     },
     legend: {
       left: 'center',
@@ -183,21 +183,21 @@ export const getScatterChartOptions = (dateTime: Array<string> = []): EChartOpti
       orient: 'horizontal', // legend 横向布局。
       data: ['按摩仪', '咖啡机'],
       itemHeight: 8,
-      itemWidth: 8,
+      itemWidth: 8
     },
     series: [
       {
         name: '按摩仪',
         symbolSize: 10,
         data: outArray,
-        type: 'scatter',
+        type: 'scatter'
       },
       {
         name: '咖啡机',
         symbolSize: 10,
         data: inArray,
-        type: 'scatter',
-      },
-    ],
+        type: 'scatter'
+      }
+    ]
   }
 }

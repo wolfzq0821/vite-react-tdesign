@@ -8,37 +8,37 @@ const { Option } = Select
 const message = [
   '1、申请开票后，电子发票在1～3个工作日内开具；增值税专用发票（纸质）如资质审核通过，将在电子发票开具后10个工作日内为您寄出；',
   '2、开票金额为您实际支付金额；',
-  '3、如有疑问请直接联系：13300001111。',
+  '3、如有疑问请直接联系：13300001111。'
 ]
 
 const names = [
   {
     label: '合同A',
-    value: 'A',
+    value: 'A'
   },
   {
     label: '合同B',
-    value: 'B',
+    value: 'B'
   },
   {
     label: '合同C',
-    value: 'C',
-  },
+    value: 'C'
+  }
 ]
 
 const types = [
   {
     label: '类型A',
-    value: 'A',
+    value: 'A'
   },
   {
     label: '类型B',
-    value: 'B',
+    value: 'B'
   },
   {
     label: '类型C',
-    value: 'C',
-  },
+    value: 'C'
+  }
 ]
 
 export default memo((props: { callback: Function }) => {

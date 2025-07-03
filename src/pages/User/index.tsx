@@ -17,7 +17,7 @@ const { ListItem, ListItemMeta } = List
 
 const User: React.FC<BrowserRouterProps> = () => {
   const chartData = useDynamicChart(visitData, {
-    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color'],
+    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color']
   })
   return (
     <div>

@@ -21,7 +21,7 @@ const renderApp = () => {
       <BrowserRouter basename={baseRouterName}>
         <App />
       </BrowserRouter>
-    </Provider>,
+    </Provider>
   )
 }
 

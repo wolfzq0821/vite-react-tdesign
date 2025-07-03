@@ -13,7 +13,7 @@ const Detail = () => (
           width: 300,
           ellipsis: true,
           colKey: 'number',
-          title: '申请号',
+          title: '申请号'
         },
         {
           align: 'left',
@@ -30,14 +30,14 @@ const Detail = () => (
                 </Tag>
               </>
             )
-          },
+          }
         },
         {
           align: 'left',
           width: 200,
           ellipsis: true,
           colKey: 'code',
-          title: '产品编号',
+          title: '产品编号'
         },
         {
           align: 'left',
@@ -47,21 +47,21 @@ const Detail = () => (
           title: '采购数量',
           cell({ row }) {
             return row.amount
-          },
+          }
         },
         {
           align: 'left',
           width: 200,
           ellipsis: true,
           colKey: 'department',
-          title: '申请部门',
+          title: '申请部门'
         },
         {
           align: 'left',
           width: 500,
           ellipsis: true,
           colKey: 'createtime',
-          title: '创建时间',
+          title: '创建时间'
         },
         {
           align: 'left',
@@ -80,8 +80,8 @@ const Detail = () => (
                 </Button>
               </>
             )
-          },
-        },
+          }
+        }
       ]}
       rowKey='id'
       verticalAlign='top'
@@ -101,7 +101,7 @@ const Detail = () => (
         onPageSizeChange(size, pageInfo) {
           console.log(size, 'onPageSizeChange size')
           console.log(pageInfo, 'onPageSizeChange pageInfo')
-        },
+        }
       }}
     />
   </Card>

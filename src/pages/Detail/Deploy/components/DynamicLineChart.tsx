@@ -7,7 +7,7 @@ import { getLineOptions } from '../chart'
 const DynamicLineChart = () => {
   const [lineOptions, setLineOptions] = useState<EChartOption>(getLineOptions())
   const dynamicLineChartOptions = useDynamicChart(lineOptions, {
-    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color'],
+    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color']
   })
 
   useEffect(() => {

@@ -12,7 +12,7 @@ export enum ELayout {
   side = 1,
   top,
   mix,
-  fullPage,
+  fullPage
 }
 
 export interface IGlobalState {
@@ -55,7 +55,7 @@ const initialState: IGlobalState = {
   showHeader: true,
   showBreadcrumbs: true,
   showFooter: true,
-  chartColors: CHART_COLORS[defaultTheme],
+  chartColors: CHART_COLORS[defaultTheme]
 }
 
 // 创建带有命名空间的reducer
@@ -113,7 +113,7 @@ const globalSlice = createSlice({
         const { colors: newPalette, primary: brandColorIndex } = Color.getColorGradations({
           colors: [hex],
           step: 10,
-          remainInput: false, // 是否保留输入 不保留会矫正不合适的主题色
+          remainInput: false // 是否保留输入 不保留会矫正不合适的主题色
         })[0]
         const newColorMap = generateColorMap(hex, newPalette, mode, brandColorIndex)
         insertThemeStylesheet(hex, newColorMap, mode)
@@ -128,9 +128,9 @@ const globalSlice = createSlice({
     },
     switchFullPage: (state, action) => {
       state.isFullPage = !!action?.payload
-    },
+    }
   },
-  extraReducers: () => {},
+  extraReducers: () => {}
 })
 
 export const selectGlobal = (state: RootState) => state.global
@@ -145,7 +145,7 @@ export const {
   switchColor,
   switchLayout,
   switchFullPage,
-  openSystemTheme,
+  openSystemTheme
 } = globalSlice.actions
 
 export default globalSlice.reducer

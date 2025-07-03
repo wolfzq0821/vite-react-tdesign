@@ -44,12 +44,12 @@ const ProductCard = ({ product }: { product: IProduct }) => {
             options={[
               {
                 content: '管理',
-                value: 1,
+                value: 1
               },
               {
                 content: '删除',
-                value: 2,
-              },
+                value: 2
+              }
             ]}
           >
             <Button theme='default' variant='text' disabled={disabled}>

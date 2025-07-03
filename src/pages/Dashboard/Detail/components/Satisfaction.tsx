@@ -15,7 +15,7 @@ const Satisfaction = () => {
   }
 
   const dynamicChartOption = useDynamicChart(customOptions, {
-    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color'],
+    placeholderColor: ['legend.textStyle.color', 'xAxis.axisLabel.color', 'yAxis.axisLabel.color']
   })
 
   return (

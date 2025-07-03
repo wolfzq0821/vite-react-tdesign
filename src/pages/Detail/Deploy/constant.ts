@@ -22,19 +22,19 @@ export const TABLE_COLUMNS: TdPrimaryTableProps['columns'] = [
     colKey: 'name',
     title: '项目名称',
     sortType: 'all',
-    sorter: nameSorter,
+    sorter: nameSorter
   },
   {
     width: '224',
     ellipsis: true,
     colKey: 'adminName',
-    title: '管理员',
+    title: '管理员'
   },
   {
     width: '224',
     ellipsis: true,
     colKey: 'telephone',
-    title: '联系方式',
+    title: '联系方式'
   },
   {
     width: '224',
@@ -43,7 +43,7 @@ export const TABLE_COLUMNS: TdPrimaryTableProps['columns'] = [
     colKey: 'updateTime',
     title: '创建时间',
     sortType: 'all',
-    sorter: true,
+    sorter: true
   },
   {
     align: 'left',
@@ -52,8 +52,8 @@ export const TABLE_COLUMNS: TdPrimaryTableProps['columns'] = [
     ellipsis: true,
     colKey: 'op',
     fixed: 'right',
-    title: '操作',
-  },
+    title: '操作'
+  }
 ]
 
 export const POPUP_DATA = {
@@ -65,133 +65,133 @@ export const POPUP_DATA = {
     warningB: '',
     loading: '',
     add: '',
-    help: '',
+    help: ''
   },
   options: [
     {
       label: '资源初始化后',
-      value: 'beijing',
+      value: 'beijing'
     },
     {
       label: '上海',
-      value: 'shanghai',
-    },
+      value: 'shanghai'
+    }
   ],
   options1: [
     {
       label: '资源初始化后',
-      value: 'guangzhou',
+      value: 'guangzhou'
     },
     {
       label: '深圳',
-      value: 'shenzhen',
+      value: 'shenzhen'
     },
     {
       label: '东莞',
-      value: 'dongguang',
-    },
+      value: 'dongguang'
+    }
   ],
   options2: [
     {
       label: '资源初始化后',
-      value: 'nanjing',
+      value: 'nanjing'
     },
     {
       label: '苏州',
-      value: '苏州',
+      value: '苏州'
     },
     {
       label: '无锡',
-      value: 'wuxi',
-    },
+      value: 'wuxi'
+    }
   ],
   tSelectOptions: [
     {
       label: 'Sanzhang',
-      value: '1',
+      value: '1'
     },
     {
       label: 'ls',
-      value: '2',
+      value: '2'
     },
     {
       label: 'James',
-      value: '3',
-    },
-  ],
+      value: '3'
+    }
+  ]
 }
 
 export const BASE_INFO_DATA = [
   {
     name: '集群名',
-    value: 'helloworld',
+    value: 'helloworld'
   },
   {
     name: '集群ID',
     value: 'cls - 2ntelvxw',
     type: {
       key: 'color',
-      value: 'blue',
-    },
+      value: 'blue'
+    }
   },
   {
     name: '状态',
     value: '运行中',
     type: {
       key: 'color',
-      value: 'green',
-    },
+      value: 'green'
+    }
   },
   {
     name: 'K8S版本',
-    value: '1.7.8',
+    value: '1.7.8'
   },
   {
     name: '配置',
-    value: '6.73 核 10.30 GB',
+    value: '6.73 核 10.30 GB'
   },
   {
     name: '所在地域',
-    value: '广州',
+    value: '广州'
   },
   {
     name: '新增资源所属项目',
-    value: '默认项目',
+    value: '默认项目'
   },
   {
     name: '节点数量',
-    value: '4 个',
+    value: '4 个'
   },
   {
     name: '节点网络',
     value: 'vpc - 5frmkm1x',
     type: {
       key: 'color',
-      value: 'blue',
-    },
+      value: 'blue'
+    }
   },
   {
     name: '容器网络',
-    value: '172.16.0.0 / 16',
+    value: '172.16.0.0 / 16'
   },
   {
     name: '集群凭证',
     value: '显示凭证',
     type: {
       key: 'color',
-      value: 'blue',
-    },
+      value: 'blue'
+    }
   },
   {
     name: '创建/更新',
     value: '2018-05-31 22:11:44 2018-05-31 22:11:44',
     type: {
       key: 'contractAnnex',
-      value: 'pdf',
-    },
+      value: 'pdf'
+    }
   },
   {
     name: '描述',
-    value: 'istio_test',
-  },
+    value: 'istio_test'
+  }
 ]

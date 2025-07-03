@@ -15,23 +15,23 @@ const steps: IStep[] = [
   {
     title: '申请提交',
     content: '申请提交已于12月21日提交',
-    component: StepOne,
+    component: StepOne
   },
   {
     title: '电子发票',
     content: '预计1～3个工作日',
-    component: StepTwo,
+    component: StepTwo
   },
   {
     title: '发票已邮寄',
     content: '电子发票开出后7个工作日内联系',
-    component: StepThree,
+    component: StepThree
   },
   {
     title: '完成',
     content: '',
-    component: StepFour,
-  },
+    component: StepFour
+  }
 ]
 
 export default memo(() => {

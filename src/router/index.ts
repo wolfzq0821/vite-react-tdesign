@@ -41,13 +41,13 @@ const routes: IRouter[] = [
     Component: lazy(() => import('pages/Login')),
     isFullPage: true,
     meta: {
-      hidden: true,
-    },
+      hidden: true
+    }
   },
   {
     path: '/',
-    redirect: '/dashboard/base',
-  },
+    redirect: '/dashboard/base'
+  }
 ]
 
 const allRoutes = [...routes, ...dashboard, ...list, ...form, ...detail, ...result, ...user, ...login, ...otherRoutes]

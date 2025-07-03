@@ -13,6 +13,8 @@ declare type Recordable<T = any, K extends string | number | symbol = string> = 
   T
 >
 
+declare module 'react-redux'
+
 declare type RemoveReadonly<T> = {
   -readonly [P in keyof T]: T[P]
 }

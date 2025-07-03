@@ -22,33 +22,33 @@ const SALE_COLUMNS: TdPrimaryTableProps['columns'] = [
     fixed: 'left',
     cell: ({ rowIndex }) => (
       <span className={classnames(Style.rankIndex, { [Style.rankIndexTop]: rowIndex < 3 })}>{rowIndex + 1}</span>
-    ),
+    )
   },
   {
     align: 'left',
     ellipsis: true,
     colKey: 'productName',
     title: '客户名称',
-    width: 200,
+    width: 200
   },
   {
     align: 'center',
     colKey: 'growUp',
     width: 100,
     title: '较上周',
-    cell: ({ row }) => <TrendIcon trend={row.growUp < 0 ? ETrend.down : ETrend.up} trendNum={Math.abs(row.growUp)} />,
+    cell: ({ row }) => <TrendIcon trend={row.growUp < 0 ? ETrend.down : ETrend.up} trendNum={Math.abs(row.growUp)} />
   },
   {
     align: 'center',
     colKey: 'count',
     title: '订单量',
-    width: 100,
+    width: 100
   },
   {
     align: 'center',
     colKey: 'date',
     width: 140,
-    title: '合同签订日期',
+    title: '合同签订日期'
   },
   {
     align: 'center',
@@ -60,8 +60,8 @@ const SALE_COLUMNS: TdPrimaryTableProps['columns'] = [
       <Button variant='text' theme='primary' onClick={() => console.log(row)}>
         操作
       </Button>
-    ),
-  },
+    )
+  }
 ]
 
 const PURCHASE_COLUMNS: TdPrimaryTableProps['columns'] = [
@@ -73,33 +73,33 @@ const PURCHASE_COLUMNS: TdPrimaryTableProps['columns'] = [
     fixed: 'left',
     cell: ({ rowIndex }) => (
       <span className={classnames(Style.rankIndex, { [Style.rankIndexTop]: rowIndex < 3 })}>{rowIndex + 1}</span>
-    ),
+    )
   },
   {
     align: 'left',
     ellipsis: true,
     colKey: 'productName',
     title: '供应商名称',
-    width: 200,
+    width: 200
   },
   {
     align: 'center',
     colKey: 'growUp',
     width: 100,
     title: '较上周',
-    cell: ({ row }) => <TrendIcon trend={row.growUp < 0 ? ETrend.down : ETrend.up} trendNum={Math.abs(row.growUp)} />,
+    cell: ({ row }) => <TrendIcon trend={row.growUp < 0 ? ETrend.down : ETrend.up} trendNum={Math.abs(row.growUp)} />
   },
   {
     align: 'center',
     colKey: 'count',
     title: '订单量',
-    width: 100,
+    width: 100
   },
   {
     align: 'center',
     colKey: 'date',
     width: 140,
-    title: '合同签订日期',
+    title: '合同签订日期'
   },
   {
     align: 'center',
@@ -111,8 +111,8 @@ const PURCHASE_COLUMNS: TdPrimaryTableProps['columns'] = [
       <Button variant='text' theme='primary' onClick={() => console.log(row)}>
         操作
       </Button>
-    ),
-  },
+    )
+  }
 ]
 
 const RankList = () => (

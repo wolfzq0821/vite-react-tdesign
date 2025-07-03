@@ -28,7 +28,7 @@ const ManagementPopup = ({ visible }: IProps): React.ReactElement => {
               <p
                 className={classnames({
                   [Style.popupItem_green]: item.type && item.type.value === 'green',
-                  [Style.popupItem_blue]: item.type && item.type.value === 'blue',
+                  [Style.popupItem_blue]: item.type && item.type.value === 'blue'
                 })}
               >
                 {item.value}

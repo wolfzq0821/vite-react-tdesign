@@ -6,7 +6,7 @@ import Style from './index.module.less'
 
 export enum ETrend {
   up,
-  down,
+  down
 }
 
 export interface IBoardProps extends React.HTMLAttributes<HTMLElement> {
@@ -24,13 +24,13 @@ export const TrendIcon = ({ trend, trendNum }: { trend?: ETrend; trendNum?: stri
   <div
     className={classnames({
       [Style.trendColorUp]: trend === ETrend.up,
-      [Style.trendColorDown]: trend === ETrend.down,
+      [Style.trendColorDown]: trend === ETrend.down
     })}
   >
     <div
       className={classnames(Style.trendIcon, {
         [Style.trendIconUp]: trend === ETrend.up,
-        [Style.trendIconDown]: trend === ETrend.down,
+        [Style.trendIconDown]: trend === ETrend.down
       })}
     >
       {trend === ETrend.up ? (
@@ -54,7 +54,7 @@ const Board = ({ title, count, desc, trend, trendNum, Icon, dark, border = false
     title={<span className={Style.boardTitle}>{title}</span>}
     className={classnames({
       [Style.boardPanelDark]: dark,
-      [Style.boardPanel]: true,
+      [Style.boardPanel]: true
     })}
     bordered={border}
     footer={

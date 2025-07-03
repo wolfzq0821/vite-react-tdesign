@@ -13,7 +13,7 @@ const typeMap: {
 } = {
   1: 'danger',
   2: 'primary',
-  3: 'warning',
+  3: 'warning'
 }
 
 interface IMsgListProps {
@@ -59,7 +59,7 @@ const MsgList = memo((props: IMsgListProps) => {
         >
           <div
             className={classnames(Style.content, {
-              [Style.unread]: item.status === 1,
+              [Style.unread]: item.status === 1
             })}
           >
             <Tag variant='light' theme={typeMap[item.type]} className={Style.tag}>

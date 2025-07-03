@@ -17,7 +17,7 @@ const initialState: IInitialState = {
   current: 1,
   pageSize: 10,
   total: 0,
-  contractList: [],
+  contractList: []
 }
 
 export const getList = createAsyncThunk(
@@ -28,16 +28,16 @@ export const getList = createAsyncThunk(
       list: result?.list,
       total: result?.total,
       pageSize: params.pageSize,
-      current: params.current,
+      current: params.current
     }
-  },
+  }
 )
 
 const listBaseSlice = createSlice({
   name: namespace,
   initialState,
   reducers: {
-    clearPageState: () => initialState,
+    clearPageState: () => initialState
   },
   extraReducers: (builder) => {
     builder
@@ -54,7 +54,7 @@ const listBaseSlice = createSlice({
       .addCase(getList.rejected, (state) => {
         state.loading = false
       })
-  },
+  }
 })
 
 export const { clearPageState } = listBaseSlice.actions
