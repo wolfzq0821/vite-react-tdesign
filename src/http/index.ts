@@ -1,6 +1,11 @@
 import { CONTENT_TYPE } from 'constants/index'
 import service from './service'
 
+/**
+ * 请求配置类型
+ * @param option
+ * @returns
+ */
 const request = (option: AxiosConfig) => {
   const { url, method, params, data, headers, responseType } = option
 
